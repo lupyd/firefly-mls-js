@@ -287,22 +287,22 @@ function takeFromExternrefTable0(idx) {
     wasm.__externref_table_dealloc(idx);
     return value;
 }
-function __wbg_adapter_14(arg0, arg1) {
+function __wbg_adapter_10(arg0, arg1, arg2) {
+    _assertNum(arg0);
+    _assertNum(arg1);
+    wasm.closure554_externref_shim(arg0, arg1, arg2);
+}
+
+function __wbg_adapter_13(arg0, arg1) {
     _assertNum(arg0);
     _assertNum(arg1);
     wasm.wasm_bindgen__convert__closures_____invoke__hddbc8a92f66cc1a7(arg0, arg1);
 }
 
-function __wbg_adapter_17(arg0, arg1, arg2) {
+function __wbg_adapter_174(arg0, arg1, arg2, arg3) {
     _assertNum(arg0);
     _assertNum(arg1);
-    wasm.closure550_externref_shim(arg0, arg1, arg2);
-}
-
-function __wbg_adapter_173(arg0, arg1, arg2, arg3) {
-    _assertNum(arg0);
-    _assertNum(arg1);
-    wasm.closure764_externref_shim(arg0, arg1, arg2, arg3);
+    wasm.closure768_externref_shim(arg0, arg1, arg2, arg3);
 }
 
 /**
@@ -636,6 +636,15 @@ export class FireflyMlsGroup {
     free() {
         const ptr = this.__destroy_into_raw();
         wasm.__wbg_fireflymlsgroup_free(ptr, 0);
+    }
+    /**
+     * @returns {Promise<Uint8Array>}
+     */
+    state() {
+        if (this.__wbg_ptr == 0) throw new Error('Attempt to use a moved value');
+        _assertNum(this.__wbg_ptr);
+        const ret = wasm.fireflymlsgroup_state(this.__wbg_ptr);
+        return ret;
     }
     clear_proposals() {
         if (this.__wbg_ptr == 0) throw new Error('Attempt to use a moved value');
@@ -1128,7 +1137,7 @@ export function __wbg_new_2e3c58a15f39f5f9() { return logError(function (arg0, a
             const a = state0.a;
             state0.a = 0;
             try {
-                return __wbg_adapter_173(a, state0.b, arg0, arg1);
+                return __wbg_adapter_174(a, state0.b, arg0, arg1);
             } finally {
                 state0.a = a;
             }
@@ -1434,15 +1443,21 @@ export function __wbindgen_cast_2241b6af4c4b2941() { return logError(function (a
     return ret;
 }, arguments) };
 
+export function __wbindgen_cast_2fb66661e8d075cf() { return logError(function (arg0, arg1) {
+    // Cast intrinsic for `Closure(Closure { dtor_idx: 553, function: Function { arguments: [Externref], shim_idx: 554, ret: Unit, inner_ret: Some(Unit) }, mutable: true }) -> Externref`.
+    const ret = makeMutClosure(arg0, arg1, 553, __wbg_adapter_10);
+    return ret;
+}, arguments) };
+
 export function __wbindgen_cast_4625c577ab2ec9ee() { return logError(function (arg0) {
     // Cast intrinsic for `U64 -> Externref`.
     const ret = BigInt.asUintN(64, arg0);
     return ret;
 }, arguments) };
 
-export function __wbindgen_cast_4bdd81be241a5b48() { return logError(function (arg0, arg1) {
-    // Cast intrinsic for `Closure(Closure { dtor_idx: 549, function: Function { arguments: [Externref], shim_idx: 550, ret: Unit, inner_ret: Some(Unit) }, mutable: true }) -> Externref`.
-    const ret = makeMutClosure(arg0, arg1, 549, __wbg_adapter_17);
+export function __wbindgen_cast_5b6ee4bae129523c() { return logError(function (arg0, arg1) {
+    // Cast intrinsic for `Closure(Closure { dtor_idx: 477, function: Function { arguments: [], shim_idx: 478, ret: Unit, inner_ret: Some(Unit) }, mutable: true }) -> Externref`.
+    const ret = makeMutClosure(arg0, arg1, 477, __wbg_adapter_13);
     return ret;
 }, arguments) };
 
@@ -1457,12 +1472,6 @@ export function __wbindgen_cast_77bc3e92745e9a35() { return logError(function (a
 export function __wbindgen_cast_cb9088102bce6b30() { return logError(function (arg0, arg1) {
     // Cast intrinsic for `Ref(Slice(U8)) -> NamedExternref("Uint8Array")`.
     const ret = getArrayU8FromWasm0(arg0, arg1);
-    return ret;
-}, arguments) };
-
-export function __wbindgen_cast_db65bdc9792f9276() { return logError(function (arg0, arg1) {
-    // Cast intrinsic for `Closure(Closure { dtor_idx: 473, function: Function { arguments: [], shim_idx: 474, ret: Unit, inner_ret: Some(Unit) }, mutable: true }) -> Externref`.
-    const ret = makeMutClosure(arg0, arg1, 473, __wbg_adapter_14);
     return ret;
 }, arguments) };
 

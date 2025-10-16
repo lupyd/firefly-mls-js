@@ -55,6 +55,7 @@ export class FireflyMlsGroup {
   private constructor();
   free(): void;
   [Symbol.dispose](): void;
+  state(): Promise<Uint8Array>;
   clear_proposals(): void;
   clear_pending_commit(): void;
   apply_pending_commit(): Promise<void>;
