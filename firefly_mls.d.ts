@@ -56,6 +56,7 @@ export class FireflyMlsGroup {
   free(): void;
   [Symbol.dispose](): void;
   state(): Promise<Uint8Array>;
+  extension_to_js(): string;
   clear_proposals(): void;
   clear_pending_commit(): void;
   apply_pending_commit(): Promise<void>;
