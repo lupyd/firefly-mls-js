@@ -1,4 +1,4 @@
-import { FireflyMlsClient } from "./mls_wasm"
+import { FireflyMlsClient } from "../firefly_mls"
 
 
 const auth = getAuth()

@@ -5,13 +5,11 @@
   "files": [
     "firefly_mls_bg.wasm",
     "firefly_mls.js",
-    "firefly_mls_bg.js",
     "firefly_mls.d.ts"
   ],
   "main": "firefly_mls.js",
   "types": "firefly_mls.d.ts",
   "sideEffects": [
-    "./firefly_mls.js",
     "./snippets/*"
   ]
 }
