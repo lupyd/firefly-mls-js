@@ -108,13 +108,6 @@ export interface InitOutput {
   readonly __wbg_set_grouprole_name: (a: number, b: number, c: number) => void;
   readonly __wbg_get_grouprole_permissions: (a: number) => number;
   readonly __wbg_set_grouprole_permissions: (a: number, b: number) => void;
-  readonly __wbg_fireflykeypackagestorage_free: (a: number, b: number) => void;
-  readonly fireflykeypackagestorage_new: (a: any, b: any, c: any) => number;
-  readonly __wbg_fireflygroupstatestorage_free: (a: number, b: number) => void;
-  readonly fireflygroupstatestorage_new: (a: any, b: any, c: any, d: any) => number;
-  readonly start: () => void;
-  readonly add: (a: bigint, b: bigint) => bigint;
-  readonly run_test_binding: () => any;
   readonly __wbg_fireflygroupextension_free: (a: number, b: number) => void;
   readonly __wbg_encryptedmessage_free: (a: number, b: number) => void;
   readonly __wbg_get_encryptedmessage_sender: (a: number) => [number, number];
@@ -142,6 +135,13 @@ export interface InitOutput {
   readonly fireflymlsgroup_update_channel: (a: number, b: number, c: number, d: number) => any;
   readonly fireflymlsgroup_update_role: (a: number, b: number, c: number, d: number, e: number, f: number) => any;
   readonly fireflymlsgroup_update_user: (a: number, b: number, c: number, d: number) => any;
+  readonly start: () => void;
+  readonly add: (a: bigint, b: bigint) => bigint;
+  readonly run_test_binding: () => any;
+  readonly __wbg_fireflykeypackagestorage_free: (a: number, b: number) => void;
+  readonly fireflykeypackagestorage_new: (a: any, b: any, c: any) => number;
+  readonly __wbg_fireflygroupstatestorage_free: (a: number, b: number) => void;
+  readonly fireflygroupstatestorage_new: (a: any, b: any, c: any, d: any) => number;
   readonly __wbindgen_exn_store: (a: number) => void;
   readonly __externref_table_alloc: () => number;
   readonly __wbindgen_export_2: WebAssembly.Table;
@@ -150,9 +150,9 @@ export interface InitOutput {
   readonly __wbindgen_realloc: (a: number, b: number, c: number, d: number) => number;
   readonly __wbindgen_export_6: WebAssembly.Table;
   readonly __externref_table_dealloc: (a: number) => void;
-  readonly closure563_externref_shim: (a: number, b: number, c: any) => void;
+  readonly closure575_externref_shim: (a: number, b: number, c: any) => void;
   readonly wasm_bindgen__convert__closures_____invoke__h952ac79b7bcac5cb: (a: number, b: number) => void;
-  readonly closure703_externref_shim: (a: number, b: number, c: any, d: any) => void;
+  readonly closure715_externref_shim: (a: number, b: number, c: any, d: any) => void;
   readonly __wbindgen_start: () => void;
 }
 
